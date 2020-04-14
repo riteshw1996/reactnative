@@ -21,7 +21,8 @@ export default class SignUp extends React.Component {
     state = {
       fullName: "",
       email: "",
-      password: ""
+      password: "",
+      confirmPassword: ""
     };
   }
 
@@ -79,6 +80,22 @@ export default class SignUp extends React.Component {
             secureTextEntry={true}
             underlineColorAndroid="transparent"
             onChangeText={password => this.setState({ password })}
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Image
+            style={styles.inputIcon}
+            source={{
+              uri: "https://png.icons8.com/key-2/ultraviolet/50/3498db"
+            }}
+          />
+          <TextInput
+            style={styles.inputs}
+            placeholder="Confirm Password"
+            secureTextEntry={true}
+            underlineColorAndroid="transparent"
+            onChangeText={confirmPassword => this.setState({ confirmPassword })}
           />
         </View>
 
